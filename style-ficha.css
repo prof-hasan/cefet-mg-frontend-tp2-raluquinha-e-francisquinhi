@@ -1,0 +1,388 @@
+@font-face {
+    font-family: 'medieval times';
+    src: url(Fontes/MedievalTimes-AL7l6.ttf) format('truetype');
+    font-family: 'gothic';
+    src: url(Fontes/GothichaRegular-d9BjV.ttf) format('truetype');
+    font-family: 'fire';
+    src: url(Fontes/BreatheFire-65pg.ttf) format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap');
+
+
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #aa0404;
+    font-family: 'Baskervville SC';
+    
+}
+
+p {
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+a {
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+
+}
+
+label {
+    color: #fcffe5;
+    font-size: 15px;
+    font-family: 'gothic';
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+
+
+#body-ficha3 {
+    background-image: url(imgs/cena-de-fantasia-em-3d.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+
+}
+
+.geral {
+    display: grid;
+    grid-template-columns: 2.5vw 20vw 7.5vw 40vw 7.5vw 20vw 2.5vw;
+    grid-template-rows: 5vh 10vh 5vh 80vh;
+}   
+
+
+
+.personagem {
+    background-color: rgba(51, 51, 51, 0.5);    
+    height: calc(80vh - 18.5px);
+    border: solid 10px #29251f;
+    border-style: groove;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    justify-items: center;
+    align-items: center;
+    box-shadow:
+        inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+        inset -10px -10px 20px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+}
+
+.personagem.visible {
+    opacity: 1;
+}
+
+.personagem div {
+    width: 178px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 178px 60px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 10px 0 10px;
+}
+
+.personagem div:active {
+    opacity: 0.5;
+}
+.escolhas div:active {
+    opacity: 0.5;
+}
+
+
+.personagem p,
+.personagem a {
+    color: #fcffe5;
+    font-size: 15px;
+    font-family: 'gothic';
+    display: flex;
+}
+
+.personagem div:hover {
+    cursor: pointer;
+}
+
+#body-ficha2 header {
+    display: none;
+}
+
+#imagem-personagem {
+    height: calc(80vh - 18.5px);
+    background-color: rgba(51, 51, 51, 0.5);
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    border: solid 10px #29251f;
+    border-style: groove;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow:
+        inset 20px 20px 20px rgba(0, 0, 0, 0.2),
+        inset -20px -20px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#imagem-personagem img{
+    width: 35vw;
+    height: 35vw;
+    display: block;
+    position: absolute;
+}
+
+#olhos {
+    width: 45px;
+    background-color: #aa0404;
+    position: absolute;
+    height: 45px;
+    bottom: 80%;
+    left: 45%;
+}
+
+.geral .personalização {
+    align-items: center;
+    justify-content: space-around;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.escolhas {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    background-color: rgba(51, 51, 51, 0.5);
+    height: 9vh;
+    border: solid 10px #29251f;
+    border-style: groove;
+    display: grid;
+    grid-template-columns: 4vw 19.25vw 19.25vw 19.25vw 19.25vw 4vw;
+    justify-items: center;
+    align-items: center;
+    box-shadow:
+        inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+        inset -10px -10px 20px rgba(0, 0, 0, 0.2);
+}
+.selecionado{
+    width: 140px;
+    height: 46.67px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 140px 46.67px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: 0.5s;
+}
+.naoSelecionado{
+    opacity: 0.5;
+    width: 105px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 105px 35px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: 0.5s;
+}
+
+.selecionado p {
+    color: #fcffe5;
+    font-size: 13.5px;
+    font-family: 'gothic';
+    display: flex;
+    transition: 0.5s;
+}
+
+.naoSelecionado p{
+    color: #fcffe5;
+    font-size: 10.15px;
+    font-family: 'gothic';
+    display: flex;
+    transition: 0.5s;
+}
+
+
+.setas{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-position: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.classesPersonalizacao{
+    display: grid;
+}
+
+.personagem{
+    display: none;
+}
+
+.classesPersonalizacao{
+    display: grid;
+}
+.galeriaDeSelecao{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    background-color: rgba(51, 51, 51, 0.5);
+    height: calc(80vh - 18.5px);
+    border: solid 10px #29251f;
+    border-style: groove;
+    box-shadow:
+        inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+        inset -10px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.itemGaleria{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(80vh - 18.5px);
+    overflow: auto;
+}
+
+.itemGaleria img{
+    filter: drop-shadow(0px 0px 20px rgb(161, 210, 173));
+}
+
+.galeriaDeSelecao p{
+    text-align: center;
+    font-size: 15px;
+    margin: 7.5%;
+}
+
+.galeriaDeSelecao img{
+    width: 12vw;
+    margin: 0 auto;
+    padding: 2vh;
+}
+.itemGaleria{
+    display: none;
+}
+.galeriaDeSelecao{
+    display: none;
+}
+
+.botaoSelecao, .botaoSelecaoClasse{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 180px 60px;
+    margin: 30px auto 30px auto;
+}
+
+.botaoSelecao p{
+    color: #fcffe5;
+    font-size: 15px;
+    font-family: 'gothic';
+    display: flex;
+}
+
+.botaoSelecao:hover{
+    cursor: pointer;
+}
+.botaoSelecao:active{
+    opacity: 0.5;
+}
+
+#item-olhos{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+#inputOlhos {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+#flecha-personagem-esquerda {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    width: 80px;
+}
+#flecha-personagem-direita {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    width: 80px;
+}
+
